@@ -1,0 +1,44 @@
+<h3 align="center">Choose Payment Method</h3>
+<table style="margin-left: 100px">
+  <tr>
+    <td style="outline-style: auto;">
+      <br>
+      <input align="center" type="checkbox" name="test" [checked]="currentlyChecked === check_box_type.COD" (click)="selectCheckBox(check_box_type.COD)">Cash on Delivery
+      <br><br>
+    </td>
+  </tr>
+  <br>
+  <tr>
+    <td style="outline-style: auto">
+      <br>
+      <input type="checkbox" name="test" [checked]="currentlyChecked === check_box_type.ONLINEBANKING" (click)="selectCheckBox(check_box_type.ONLINEBANKING)">Online Banking
+      <br><br>
+    </td>
+  </tr>
+  <br>
+  <tr>
+    <td style="outline-style: auto">
+      <br>
+      <input type="checkbox" name="test" [checked]="currentlyChecked === check_box_type.PICKUP" (click)="selectCheckBox(check_box_type.PICKUP)">Pick up from Store
+      <br><br>
+    </td>
+  </tr>
+  <br>
+  <tr *ngIf="clicked">
+    <td style="outline-style: auto">
+      <br>
+      <select style="border: none">
+        <option selected disabled>Choose a Store</option>
+        <option value="kukatpally">kukatpally</option>
+        <option value="mehadipatnam">mehadipatnam</option>
+      </select>
+      <br><br>
+    </td>
+  </tr>
+</table>
+<div>
+  <h3>Grand Total<span style="float: right">165900</span> </h3>
+  <div align="center">
+    <button  style="background-color: dodgerblue" (click)="exampleMethodChild3()">Submit</button>
+  </div>
+</div>

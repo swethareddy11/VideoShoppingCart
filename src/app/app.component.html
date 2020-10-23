@@ -1,0 +1,31 @@
+<div *ngIf="!showShipping&&!showFirst&&!showBilling&&!showEnd">
+  <app-main (exampleOutput1)="exampleMethodParrent1($event)" [childExample3]="parentExample3"></app-main>
+</div>
+<div *ngIf="showShipping||showFirst||showBilling||showEnd">
+  <span style="float:right;margin-right:420px;font-style: italic;font-size: 14px;font-weight: bold;color: hotpink " >F1 studioz</span>
+  <div class="leftpane"  [style.height.px]="innerHeight">
+    <app-main (exampleOutput1)="exampleMethodParrent1($event)" [childExample3]="parentExample4"></app-main></div>&nbsp;
+  <div class="gappane"[style.height.px]="innerHeight"></div>
+</div>
+<div *ngIf="showBilling">
+  <div class="middlepane"><app-orderflow [childExample1]="parentExample1"></app-orderflow></div><br/><br/>
+  <div class="middlepane1" style="border: 1px black"><app-product ></app-product></div>
+  <div class="middlepane2"><app-productsummary (exampleOutput)="exampleMethodParrent($event)"></app-productsummary></div>
+</div>
+<div *ngIf="showFirst">
+  <div class="middlepane"><app-orderflow [childExample]="parentExample"></app-orderflow></div><br/><br/>
+  <div><app-customerdetails (exampleOutput)="exampleMethodParrent2($event)"></app-customerdetails></div><br/><br/>
+</div>
+
+<div *ngIf="showShipping">
+  <div class="middlepane"><app-orderflow [childExample2]="parentExample2"></app-orderflow></div><br/><br/>
+  <div><app-shippingdetails (exampleOutput)="exampleMethodParrent3($event)"></app-shippingdetails></div><br/><br/>
+</div>
+
+<div *ngIf="showEnd">
+  <div align="center"style="margin-top: 200px;background-color: lightgrey">
+    <img  src="../../assets/tick.png" width="50" >
+    <p>Thanks for the confirmation.We have sent payment link to {{exampleParent2}} </p>
+  </div>
+</div>
+

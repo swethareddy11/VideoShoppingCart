@@ -1,0 +1,27 @@
+<div style="margin-left: 50px">
+  <mat-tab-group class="col-sm-4">
+    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab" >
+      <ng-template mat-tab-label="tab">
+        <mat-tab-label class="mylabel">{{tab}}</mat-tab-label>
+        <button mat-raised-button
+                type="button" class="close" aria-label="Close"
+                [disabled]="tabs.length === 1"
+                (click)="removeTab(index)">
+          <span aria-hidden="true">×</span>
+        </button>
+        <mat-icon></mat-icon>
+      </ng-template><br/><br/>
+      Product Id : <input type="text" value={{this.build[0].productId}} ><br/><br/>
+      Product Type:<input type="text" value={{this.build[0].productName}}><br/><br/>
+      Purity : <input type="text" value={{this.build[0].purity}}><br/><br/>
+      Weight : <input type="text" value={{this.build[0].weight}}><br/><br/>
+    </mat-tab>
+    <mat-tab disabled>
+      <ng-template mat-tab-label>
+        <button mat-icon-button (click)="addTab()">
+          <mat-label>Add New Product</mat-label>
+        </button>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

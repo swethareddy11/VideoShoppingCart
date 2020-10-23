@@ -1,0 +1,52 @@
+<div align="center" style="margin-top: 80px">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+      First Name*:
+      <input type="text" formControlName="firstName" required>
+    </label><br/><br/>
+
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label><br/><br/>
+
+    <label>
+      Email*:
+      <input type="email" formControlName="email">
+    </label><br/><br/>
+
+    <label>
+      PhoneNumber:
+      <input type="text" formControlName="phoneno">
+    </label>
+
+    <div formGroupName="address">
+      <h3>Address</h3>
+
+      <label>
+        Street:
+        <input type="text" formControlName="street">
+      </label><br/><br/>
+
+      <label>
+        City:
+        <input type="text" formControlName="city">
+      </label><br/><br/>
+
+      <label>
+        State:
+        <input type="text" formControlName="state">
+      </label><br/><br/>
+
+      <label>
+        Pin Code:
+        <input type="text" formControlName="zip">
+      </label><br/><br/>
+    </div>
+  </form>
+</div>
+<div>
+  <h3>Grand Total<span style="float:right">165900</span> </h3>
+</div><div align="center">
+  <button type="submit" (click)="exampleMethodChild2()" style="background-color: dodgerblue" [disabled]="!profileForm.valid">Submit</button>
+</div>

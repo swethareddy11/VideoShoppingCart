@@ -1,0 +1,60 @@
+.example-input-label,
+.example-add-tab-button,
+.example-delete-tab-button {
+  margin: 8px;
+}
+mat-tab {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  color: red;
+  font-weight: 700;
+  border-bottom-color: aqua;
+  border: black;
+}
+
+.mylabel
+{
+  border: black;
+  border-radius: 8px;
+}
+
+mat-tab-label{
+  border: 1px solid black;
+  font-family: "Arial Black";
+  background-color: aliceblue;
+}
+
+input{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+
+
+mat-tab-label {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  color: black;
+  font-weight: 700;
+}
+
+/* Styles for the active tab label */
+mat-tab-label.mat-tab-label-active {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  color: red;
+  font-weight: 700;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+  background-color: grey;
+}
+
+p {
+  font-family: Lato;
+}

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="image">
+    <div style="float:right">
+      <img  src="../../assets/img_girl.jpg" width="100" height="100">
+      <img  src="../../assets/earrings.jpg" width="100" height="100">
+      <img  src="../../assets/download.jpg" width="100" height="100">
+    </div>
+    <span>Call with Swetha</span>
+    <div  layout-align="center center" [style.margin-top]="childExample3" [style.margin-right]="childExample3" style="float: right;">
+      <img  src="../../assets/mute.svg" width="50">&nbsp;&nbsp;&nbsp;&nbsp;
+      <img  src="../../assets/video-off-grey.svg" width="50" >&nbsp;&nbsp;&nbsp;&nbsp;
+      <img  src="../../assets/end-call.svg" width="50" >
+      <div *ngIf="childExample3=='40%'" style="margin-top:-40px; margin-right:-300px">
+        <button style="float:right;" class="app-class3" (click)="exampleMethodChild1()">start billing</button>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+</div>
